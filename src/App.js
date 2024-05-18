@@ -98,7 +98,7 @@ export default function App() {
   const [{ questions, status, index, answer, points, highscore, secondsRemaining }, dispatch] = useReducer(reducer, initialState);
 
   useEffect(function () {
-    fetch("http://localhost:8000/questions")
+    fetch("https://fake-api-vercel-rosy.vercel.app/questions")
       .then(function (response) {
         response.json()
           .then(function (data) {
